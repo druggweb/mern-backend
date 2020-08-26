@@ -4,7 +4,7 @@ const cors = require('cors')
 const routes = require('./routes')
 const path = require('path')
 const http = require('http')
-const socketio = require('socket.io')
+//const socketio = require('socket.io')
 const PORT = process.env.PORT || 8000
 
 
@@ -12,9 +12,9 @@ const app = express()
 const server = http.Server(app)
 const io = socketio(server)
 
-io.on('connection', socket => {
-  console.log('User is connected', socket.id)
-})
+//io.on('connection', socket => {
+  //console.log('User is connected', socket.id)
+//})
 
 app.use(cors())
 app.use(express.json()) 
