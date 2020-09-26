@@ -9,10 +9,10 @@ const LoginController = require('./controllers/LoginController')
 const RegistrationController = require('./controllers/RegistrationController')
 const ApprovalController = require('./controllers/ApprovalController')
 const RejectionController = require('./controllers/RejectionController')
-//const uploadConfig = require('./config/upload')
+const uploadConfig = require('./config/upload')
 
 const routes = express.Router()
-//const upload = multer(uploadConfig)
+const upload = multer(uploadConfig)
 
 routes.get('/status', (req, res) => {
   res.send({ status: 200 })
